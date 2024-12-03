@@ -20,6 +20,7 @@ BEST_GAME=$($PSQL "SELECT MIN(guesses) FROM users INNER JOIN games USING(user_id
     echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
  fi
 
+
 guess=1
 
 RAMDON_NU=$((1 + $RANDOM % 1000))
