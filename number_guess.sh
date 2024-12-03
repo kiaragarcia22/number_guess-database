@@ -13,7 +13,6 @@ BEST_GAME=$($PSQL "SELECT MIN(guesses) FROM users INNER JOIN games USING(user_id
 
  if [[ -z $USERNAME_AVAIL ]]
  then
-    # echo "no found"
     INSERT_USERNAME=$($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
     echo "Welcome, $USERNAME! It looks like this is your first time here."
   else
