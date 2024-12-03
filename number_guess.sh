@@ -47,6 +47,5 @@ else
     echo "You guessed it in $guess tries. The secret number was $RAMDON_NU. Nice job!"
 fi
 
-
 USERNAME_ID=$($PSQL "SELECT user_id FROM users WHERE username = '$USERNAME'")
 INSERT_GAME=$($PSQL "INSERT INTO games(guesses, user_id) VALUES($guess, $USERNAME_ID)")
